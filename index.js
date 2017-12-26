@@ -100,10 +100,9 @@ function trackEnd(event, properties) {
  * @param event
  * @param properties
  */
-function trackInstallation(event, properties) {
+function trackInstallation(event, properties = null) {
   RNSensorsAnalytics && RNSensorsAnalytics.trackInstallation && RNSensorsAnalytics.trackInstallation(event, properties);
 }
-
 
 export default {
     init,
@@ -114,6 +113,6 @@ export default {
     enableAutoTrack,
     track,
     trackBegin,
-    trackEnd
+    trackEnd,
+    trackInstallation
 };
-
