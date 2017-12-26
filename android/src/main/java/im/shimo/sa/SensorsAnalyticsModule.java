@@ -140,6 +140,11 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void enableReactNativeAutoTrack() {
+        SensorsDataAPI.sharedInstance(mContext).enableReactNativeAutoTrack();
+    }
+
+    @ReactMethod
     public void track(String event, ReadableMap properties) {
         try {
             SensorsDataAPI.sharedInstance(mContext).track(event, convertMapToJson(properties));

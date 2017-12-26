@@ -17,7 +17,7 @@ const RNSensorsAnalytics = NativeModules.RNSensorsAnalytics;
  * networkTypes: 同步数据时的网络策略。 ['2G', '3G', '4G', 'WIFI', 'ALL']
  */
 function init(properties) {
-    RNSensorsAnalytics && RNSensorsAnalytics.init && RNSensorsAnalytics.init(properties);
+  RNSensorsAnalytics && RNSensorsAnalytics.init && RNSensorsAnalytics.init(properties);
 }
 
 /**
@@ -26,14 +26,14 @@ function init(properties) {
  * @param loginId
  */
 function login(loginId) {
-    RNSensorsAnalytics && RNSensorsAnalytics.login && RNSensorsAnalytics.login(loginId);
+  RNSensorsAnalytics && RNSensorsAnalytics.login && RNSensorsAnalytics.login(loginId);
 }
 
 /**
  * 注销
  */
 function logout() {
-    RNSensorsAnalytics && RNSensorsAnalytics.logout && RNSensorsAnalytics.logout();
+  RNSensorsAnalytics && RNSensorsAnalytics.logout && RNSensorsAnalytics.logout();
 }
 
 /**
@@ -44,7 +44,7 @@ function logout() {
  * Age
  */
 function set(profile) {
-    RNSensorsAnalytics && RNSensorsAnalytics.set && RNSensorsAnalytics.set(profile);
+  RNSensorsAnalytics && RNSensorsAnalytics.set && RNSensorsAnalytics.set(profile);
 }
 
 /**
@@ -53,16 +53,25 @@ function set(profile) {
  * @param profile
  */
 function setOnce(profile) {
-    RNSensorsAnalytics && RNSensorsAnalytics.setOnce && RNSensorsAnalytics.setOnce(profile);
+  RNSensorsAnalytics && RNSensorsAnalytics.setOnce && RNSensorsAnalytics.setOnce(profile);
 }
 
 /**
- * 开启自动 track
+ * 开启自动追踪
  *
  * @param eventTypeList 自动采集的类型, eg: ['AppStart', 'AppEnd', 'AppClick', 'AppViewScreen']
  */
 function enableAutoTrack(eventTypeList) {
-    RNSensorsAnalytics && RNSensorsAnalytics.enableAutoTrack && RNSensorsAnalytics.enableAutoTrack(eventTypeList);
+  RNSensorsAnalytics && RNSensorsAnalytics.enableAutoTrack && RNSensorsAnalytics.enableAutoTrack(eventTypeList);
+}
+
+/**
+ * 开启自动追踪,支持 React Native
+ *
+ * 只支持 Android，iOS 把 Podfile 改成 `pod 'SensorsAnalyticsSDK', :subspecs => ['ENABLE_REACT_NATIVE_APPCLICK']`
+ */
+function enableReactNativeAutoTrack() {
+  RNSensorsAnalytics && RNSensorsAnalytics.enableReactNativeAutoTrack && RNSensorsAnalytics.enableReactNativeAutoTrack();
 }
 
 /**
@@ -72,7 +81,7 @@ function enableAutoTrack(eventTypeList) {
  * @param properties
  */
 function track(event, properties) {
-    RNSensorsAnalytics && RNSensorsAnalytics.track && RNSensorsAnalytics.track(event, properties);
+  RNSensorsAnalytics && RNSensorsAnalytics.track && RNSensorsAnalytics.track(event, properties);
 }
 
 /**
@@ -81,7 +90,7 @@ function track(event, properties) {
  * @param event
  */
 function trackBegin(event) {
-    RNSensorsAnalytics && RNSensorsAnalytics.trackBegin && RNSensorsAnalytics.trackBegin(event);
+  RNSensorsAnalytics && RNSensorsAnalytics.trackBegin && RNSensorsAnalytics.trackBegin(event);
 }
 
 /**
@@ -91,7 +100,7 @@ function trackBegin(event) {
  * @param properties
  */
 function trackEnd(event, properties) {
-    RNSensorsAnalytics && RNSensorsAnalytics.trackEnd && RNSensorsAnalytics.trackEnd(event, properties);
+  RNSensorsAnalytics && RNSensorsAnalytics.trackEnd && RNSensorsAnalytics.trackEnd(event, properties);
 }
 
 /**
@@ -105,14 +114,15 @@ function trackInstallation(event, properties = null) {
 }
 
 export default {
-    init,
-    login,
-    logout,
-    set,
-    setOnce,
-    enableAutoTrack,
-    track,
-    trackBegin,
-    trackEnd,
-    trackInstallation
+  init,
+  login,
+  logout,
+  set,
+  setOnce,
+  enableAutoTrack,
+  enableReactNativeAutoTrack,
+  track,
+  trackBegin,
+  trackEnd,
+  trackInstallation
 };
