@@ -43,6 +43,10 @@ Android
 
 * eventTypeList 自动采集的类型, eg: ['AppStart', 'AppEnd', 'AppClick', 'AppViewScreen']
 
+`enableReactNativeAutoTrack()` 开启自动追踪,支持 React Native
+
+只支持 Android。iOS 把 Podfile 改成 `pod 'SensorsAnalyticsSDK', :subspecs => ['ENABLE_REACT_NATIVE_APPCLICK']`
+
 `track(event, properties)` 追踪事件
 
 `trackBegin(event)` 事件开始
