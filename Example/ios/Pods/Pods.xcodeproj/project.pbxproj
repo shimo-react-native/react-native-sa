@@ -1,0 +1,921 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		005A2E0995EF33FC0FF1032D7919F9FD /* UIViewController+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9E7D3D605109E85F08EADB51AE237F /* UIViewController+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		02F8E13D89A0FA86E092AE9FA154F73A /* SASwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 328DE55C16C5A29814636BCDA736B417 /* SASwizzle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		034D925D9D1158D2E8822471EDF8F90B /* SAUIControlBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA889568E5C103D2C561FF9767F0DF0 /* SAUIControlBinding.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		068F7B95838C864DBAE4C7103118266F /* UIImage+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E7FED607BCEE4E194F21375304C2A1 /* UIImage+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		079211A68819D0CBF5B20DB6BDF1225F /* AutoTrackUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0CB6118147DE1C9F119AE0B1985CA /* AutoTrackUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0E20E8FC8A4C27E7DE6577C5DE2F0405 /* SAEnumDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = B8467B044C7ED0ECF00C602D150823CA /* SAEnumDescription.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0E2FC9E77B61DB1A2E939B7B95BBFED3 /* SASwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D474B46BB70B79DF482E9B9198025DAF /* SASwizzle.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		103036CEF3F0865FD33085F99A03514C /* UICollectionView+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = B890D26AD98DAB269F25B7976BA2AFC4 /* UICollectionView+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11B3938225F5C517503AF16AE1B2B90A /* SAObjectSerializerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DFB75C22BAA9173D27852B5D41CB87 /* SAObjectSerializerContext.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		176E07795EC907EA3A85E528D4B80F77 /* UIActionSheet+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2069D40171AB5400487E8EEA40357C /* UIActionSheet+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		193ECA73B7A9EC2F702B633F103B9F19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B943FF5EED37D5AE080CC2050AB25D /* QuartzCore.framework */; };
+		1FDF85A1D89A23A9834FD7421FB5ED4A /* SensorsAnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4D20B59D2D179EB1A972772F59382 /* SensorsAnalyticsSDK.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		20466338AA6BDCC95BAA41C906035897 /* SALogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DFD79368B0EB9718F3E3138E9B3CA59 /* SALogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2331CEBAFCAA1BD436786021C79EF1D0 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BC042C7B9160B21A23C8592AB0AA89 /* LFCGzipUtility.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		23DB48194868529B8ACA9A9C69E4BBAF /* SATypeDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 9712697389837AB684AD51BC2FCE07A0 /* SATypeDescription.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		258F505DA650BE13FD6FC34A7B8DDF8E /* SAEnumDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B0F1065B2C94A7A6EF117A2A9323728 /* SAEnumDescription.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2A2A1533496979E923BBB7D46F384996 /* NSInvocation+SAHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7276E097D2E11DEDDC32E55A1937ABA6 /* NSInvocation+SAHelpers.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2D5A9802154FB68239F32808714DF152 /* SAEventBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = E775FBD1483DD13BCCDBAB86D98D94F0 /* SAEventBinding.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2FD6846F1305D99322C0F6C65A70653E /* JSONUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5B5FA512437FF2442E22A3EE2472B /* JSONUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		303E7A8A2049550295C4B8C577225CB7 /* UITabBar+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 2435F325C719A002AF14B6E233C82490 /* UITabBar+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		31BDFA416702E98912AAD9844229A3E7 /* SAClassDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = F525EFEF592C07EFCA35FCD93CAD3F92 /* SAClassDescription.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3321235284674AB2942C52C53271D909 /* SensorsAnalyticsSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66044ED1DB96715175E33FC530CCE3BD /* SensorsAnalyticsSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33A95599527DC6DA5CA1C1C960A18F9E /* MessageQueueBySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD9652C8D6E8648584944075DAFB8E7 /* MessageQueueBySqlite.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		344F086C0878D53F2BD1119961038417 /* SAWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C088CFFEB212D73C6DD41BBA0DC0158 /* SAWebSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		357F98766CF8AB60F2F7F499ADB112C6 /* SAObjectSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 82CA06AB146E07D885FAAA9FFDF575F1 /* SAObjectSerializer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		39AEF877E85A0B60B74AE969930FF619 /* UIViewController+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE15DDE5445058D47E9B446D7471E3 /* UIViewController+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		39E184EAB43D97A5BC15AC824269FA27 /* SADesignerMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = AB4B98C43186F45F7B36DD9B09C5A420 /* SADesignerMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D63B43077DF4322FB3C3188EB1B8752 /* SAPropertyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E8740587FD45C881BCD83FDB35DF1E /* SAPropertyDescription.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4051F3181DB5CA8BEEBB5CFA95812D9B /* MessageQueueBySqlite.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A87C15FCF2DB3854F6D3DC331393BCC /* MessageQueueBySqlite.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		430740C57BF1D97AF3D2C807C1B426EA /* SAObjectIdentityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2AB775B0802810684D5FEDF632D224 /* SAObjectIdentityProvider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		44001B3113D517EE8A7D6F5BBDD2EFCC /* NSString+HashCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC413A0A4CD6604638E31483E8AE1D /* NSString+HashCode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		46F635D8EAC0ABF94CD81996D35C7113 /* SADesignerDisconnectMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF8CE79C9F3D13EC10B2611B950ACB /* SADesignerDisconnectMessage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4757EE6CB581171EC5F4CDF85C26C076 /* SAObjectSerializerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0F19CA79A832512B551326B41D3EEE /* SAObjectSerializerConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		47595769F32730C7D5420DBAF4776A91 /* SADesignerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 336E2C40381A2DEB082E045BB08488A2 /* SADesignerConnection.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4A375A6B856BC255C88ECFFE9E745B37 /* NSInvocation+SAHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE22D61D34ECE0B04E3695864D96DD9C /* NSInvocation+SAHelpers.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		51242E3396823484BAEB2BD1C08A6232 /* SAUIControlBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 438C565C82B69E5D1751918BA1B68C71 /* SAUIControlBinding.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		53E240906F9734B0C9F513C78BAD2727 /* SASwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57C3E3B78ACCE474A46068A37BC91C /* SASwizzler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		556B42D826032350CA200C01592DFA80 /* UIView+SAHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E7C785A3BA9FC2AC2BA944F80D2FA5 /* UIView+SAHelpers.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5D8DBED3874C787841E6D65289CB56DA /* SADesignerDisconnectMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D6517348FAD4A0DCB082829958858 /* SADesignerDisconnectMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6583D55087DF5BE32D08ADC7A30618DD /* SAEventBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = D8ED138B317A4B891CE763881FA469E8 /* SAEventBinding.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6826BA7A8286E370F880F5BDF3AA80A7 /* UICollectionView+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C9FAFF0F131559E91C905046E1408 /* UICollectionView+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		70C0F9D088C32D85980A5C148D6CB66B /* NSData+SABase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E0D6139D7FE3F7395FA5A435135E0A /* NSData+SABase64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7409B17659827223AC4955D7BAB2F89C /* UITableView+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5865F96EF7651C7407A9D16F19922826 /* UITableView+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		74BDA048F1E16438F29A51E3D53678E8 /* UIActionSheet+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 71BFA8D30FAA31F94CC7E0A309EFAF0F /* UIActionSheet+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FE67F7C85720921FFE4F285E308921A /* SAObjectIdentityProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD842ADFF28E4283916B6AC6FE096BE /* SAObjectIdentityProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		83B20EB5C43C02B1A5C2306C6A33E9EB /* SATypeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D45BEEDC89218D95B605329800AE511 /* SATypeDescription.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		84F7445B2E5B9AC64D4D0A4F45E1CEC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57F06D750EFFCEE1F12C75662637EA8 /* Foundation.framework */; };
+		889CE8CC45ACD6C072AC09F3DC3DE74A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292C2D4E6F647FDDDFD4485E8331986D /* CoreTelephony.framework */; };
+		899DCFFED595F4B290EAB0A9A11E5B89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57F06D750EFFCEE1F12C75662637EA8 /* Foundation.framework */; };
+		8F12AB2DC5B7C64348F25605DFC7CE98 /* SADesignerSessionCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C9FC99FB6DAEC610979690CD28ADD7E /* SADesignerSessionCollection.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8F29494FD31FAD91F41A24B43E89E48B /* SAClassDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = EA36F9AD4168A08F4C735081468DDA34 /* SAClassDescription.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		956DE536F233C7F18CE7095135E969B0 /* SAAbstractDesignerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B52D8D68E61308D86022B3162B8DCC9C /* SAAbstractDesignerMessage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9590D5FC73B1B64871E67201F3A0EDC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBBBAD347E209208CCD56DD890BB19B /* UIKit.framework */; };
+		9EBA00CCECD8A6B8BB95595BDF1DE6A3 /* UIImage+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 397F6A86DE01FE2EE7B4E38E9C3C67C8 /* UIImage+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A40BF910F78FC54C172FAC34727DFE8B /* NSString+HashCode.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8842A3A784EFD1AAD3419D39C769D2 /* NSString+HashCode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5DC8163BD1F07085FC89040D27DC530 /* SAReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB29890FC53A249ED0EC0AE32404131 /* SAReachability.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A6712A27BBAF54E478CB531BBFB1B5B0 /* SADesignerSnapshotMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0AFB3231D93C95EEA5BAA3F5D91423 /* SADesignerSnapshotMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A71BC757CEFDD79D55968AC36DF9917C /* SAObjectSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB7E1B433C31F4D4AA0F7E1AE38D267 /* SAObjectSerializer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AA5C5BBDBF5F29EB26E3362E2ED1B6A8 /* SAWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6607309724D19D6E7254D95B535AE2 /* SAWebSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC3D447030FDFEC7585AEC2721B8A98C /* SADesignerDeviceInfoMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BC93ED9268D3C45C5FCF0FC5E99B79 /* SADesignerDeviceInfoMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AFC92CCB48EB552A92263F20C053C9A7 /* SAObjectSerializerContext.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD61C916894CF056A565CEDD0FC7A60 /* SAObjectSerializerContext.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B029F6F57D1FED8C50E09C688D61F156 /* SAApplicationStateSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 230FD6EC74596142904A6020D28D562D /* SAApplicationStateSerializer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B14CDDDB948A5BDD97C1512ED9AF7236 /* SensorsAnalyticsSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB133D45676F392135224D5325CDC05B /* SensorsAnalyticsSDK-dummy.m */; };
+		B2AA58C872E20376D217A4FD55AC1341 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */; };
+		B48C58DC6F382B0001C4D89836EEA0D5 /* SASwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6F1074FD698051B970AFD3F2744335 /* SASwizzler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B60D3B2E91634F49C25871F0AF78BE4F /* SAObjectSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C13B1CB2CDAF8A6171303B31347992 /* SAObjectSelector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B6D03AD52DC836D7843A9AF8703D48A4 /* SAUITableViewBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE9A880A42F0B6D4531D46A3FEB484A /* SAUITableViewBinding.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B70FC13089BCF7CECC697DA34DB71A53 /* SAPropertyDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 1916999AF19535EAE28224424439177D /* SAPropertyDescription.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B8972FE615D0F2975E399431155CF760 /* SADesignerEventBindingMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 26ABDB25A0C4FEA626B533C7B4A70E97 /* SADesignerEventBindingMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B96A67449F9B7236BEEC0B34D7D52E71 /* UIAlertView+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD4C3054ED88625EBB01FCC1BDF6DA9 /* UIAlertView+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BBADA3ECD3B42CBA1D940029632A7EA2 /* UITableView+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = C549F0142F0A8944E63A85FB1A5E1408 /* UITableView+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BC35ABEC1060567118B4FDD1970A815E /* SADesignerEventBindingMesssage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C0AB767776D33E23F88B4DF0C7070 /* SADesignerEventBindingMesssage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BCA447C8C6A18FF8D1981D572330030D /* SADesignerSnapshotMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 12022176AF302B17B715C76FF7789E35 /* SADesignerSnapshotMessage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BFF8686900CCF9C41D025D7577247E23 /* NSData+SABase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFB359F5115477762BFC28BAEB1533 /* NSData+SABase64.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C285326208164EE56B682FDC7BDD7DA7 /* SAValueTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = B7030604B50671F3077F70474A9FC616 /* SAValueTransformers.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C2D28A1793D2B18AD418585F1C7C47B0 /* JSONUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB4B5F3D9D24DA0F7E224160DC3221A /* JSONUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C2E647882B161866F9F51D3CBBF7DE70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B1767AE8CE61BC4BED6B37585B13E3 /* SystemConfiguration.framework */; };
+		C9A300F4F3624CC168320CCD6B6EB0BC /* SensorsAnalyticsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 590A63AA5147D78035F9330E730F2E35 /* SensorsAnalyticsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD5528CBAF0A6B4D8BF1D24F6016A528 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3331585A11D7AADE76D9E81B4DC244D9 /* CoreGraphics.framework */; };
+		D2F4B01C041C92909668844CCD341854 /* LFCGzipUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = E922B2CFF535F4045756B9753203AC38 /* LFCGzipUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D3FA468E94AD6FEF814BA799756ACAED /* UITabBar+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2557CBDA4776FC0F31467DF77FC320 /* UITabBar+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9DCE74F2556BA806A1B5F52B8ABC75C /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA0131B235E0C596F80A3643844DBF17 /* SAValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6250F7C5B56CCD0F8B7BCC9760DA083C /* SAValueTransformers.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DAE13C2ACD23137A53E4E2C1AB428A09 /* SAObjectSerializerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B78D67324E74EDB48DB1C6322B35D32E /* SAObjectSerializerConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E0C409202A45A367EF81CDAB297FA139 /* SAApplicationStateSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DDEA98A8B931264CAB7DAA9C41A852 /* SAApplicationStateSerializer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E8D876B9698CEA30C2034F1CA4FD4222 /* SAUITableViewBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A1ACEC876979A9A2510BD5B9572425 /* SAUITableViewBinding.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EA9E3D4A4C7F08DA896026F30ED64607 /* SAObjectSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA702535C8565ECDCAA05600AFC9FC4 /* SAObjectSelector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ED16D0E237122454B52DDD6E0F4CEC23 /* UIApplication+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BF8A6AC3177F907076FAE6C28CF4C6 /* UIApplication+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EECDAF21D36280EB0A43A08A8126518B /* SAAbstractDesignerMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 67F6780262FE85FD912D0C556CF03B73 /* SAAbstractDesignerMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F19E7253FFE92E86CD1BB9F649738E10 /* SADesignerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DAAECD63A00DABF1302CDBA2FED07F9 /* SADesignerConnection.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F2EECA285A035CA38622CC2796F9718C /* SADesignerDeviceInfoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A4548C5971D34D0DC570374AA04A34B9 /* SADesignerDeviceInfoMessage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F349595F3AFF862AFBAD88CD9E3D6595 /* SAReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A8241C578048D6CF4E153670800D6EC /* SAReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F361080100E5B70E65EE0EE9385D4C2B /* UIView+SAHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2DB58911DC0471BE7C57A3E500D9C8 /* UIView+SAHelpers.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F435F594A8849493078818868A91119F /* AutoTrackUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9813957B3474A68153D7DDA28F4E0B1C /* AutoTrackUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F73C90CB51446A80A8658664CCEFE7C6 /* UIApplication+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4C7910E5C294D289F5A52B9CB5F072 /* UIApplication+AutoTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBDCF81DBE8F39905C13CB4287545ECA /* UIAlertView+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 614C7B295A9EAD1CB2C6C40C8ADFD5D2 /* UIAlertView+AutoTrack.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA30EE1A96CFC61950D7B76BB514490D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ECAEBD941AD20C00E2FEF3B846C2A64;
+			remoteInfo = SensorsAnalyticsSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01E6907CF2644EB1CF8E23F708A3DA0B /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
+		0A87C15FCF2DB3854F6D3DC331393BCC /* MessageQueueBySqlite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageQueueBySqlite.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/MessageQueueBySqlite.h; sourceTree = "<group>"; };
+		0B6607309724D19D6E7254D95B535AE2 /* SAWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAWebSocket.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAWebSocket.h; sourceTree = "<group>"; };
+		0D45BEEDC89218D95B605329800AE511 /* SATypeDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SATypeDescription.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SATypeDescription.m; sourceTree = "<group>"; };
+		0EAFB359F5115477762BFC28BAEB1533 /* NSData+SABase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SABase64.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/NSData+SABase64.m"; sourceTree = "<group>"; };
+		10E0D6139D7FE3F7395FA5A435135E0A /* NSData+SABase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+SABase64.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/NSData+SABase64.h"; sourceTree = "<group>"; };
+		119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		12022176AF302B17B715C76FF7789E35 /* SADesignerSnapshotMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SADesignerSnapshotMessage.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerSnapshotMessage.m; sourceTree = "<group>"; };
+		149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		14E7FED607BCEE4E194F21375304C2A1 /* UIImage+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIImage+AutoTrack.m"; sourceTree = "<group>"; };
+		1916999AF19535EAE28224424439177D /* SAPropertyDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAPropertyDescription.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAPropertyDescription.h; sourceTree = "<group>"; };
+		1A8241C578048D6CF4E153670800D6EC /* SAReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAReachability.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAReachability.h; sourceTree = "<group>"; };
+		1AD842ADFF28E4283916B6AC6FE096BE /* SAObjectIdentityProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAObjectIdentityProvider.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectIdentityProvider.h; sourceTree = "<group>"; };
+		1DD4C3054ED88625EBB01FCC1BDF6DA9 /* UIAlertView+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIAlertView+AutoTrack.h"; sourceTree = "<group>"; };
+		21DC413A0A4CD6604638E31483E8AE1D /* NSString+HashCode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HashCode.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/NSString+HashCode.m"; sourceTree = "<group>"; };
+		230FD6EC74596142904A6020D28D562D /* SAApplicationStateSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAApplicationStateSerializer.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAApplicationStateSerializer.h; sourceTree = "<group>"; };
+		2435F325C719A002AF14B6E233C82490 /* UITabBar+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBar+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UITabBar+AutoTrack.h"; sourceTree = "<group>"; };
+		26ABDB25A0C4FEA626B533C7B4A70E97 /* SADesignerEventBindingMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SADesignerEventBindingMessage.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerEventBindingMessage.h; sourceTree = "<group>"; };
+		28B943FF5EED37D5AE080CC2050AB25D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		292C2D4E6F647FDDDFD4485E8331986D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		2CE9A880A42F0B6D4531D46A3FEB484A /* SAUITableViewBinding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAUITableViewBinding.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAUITableViewBinding.h; sourceTree = "<group>"; };
+		328DE55C16C5A29814636BCDA736B417 /* SASwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASwizzle.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SASwizzle.h; sourceTree = "<group>"; };
+		3331585A11D7AADE76D9E81B4DC244D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		336E2C40381A2DEB082E045BB08488A2 /* SADesignerConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SADesignerConnection.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerConnection.m; sourceTree = "<group>"; };
+		38BC93ED9268D3C45C5FCF0FC5E99B79 /* SADesignerDeviceInfoMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SADesignerDeviceInfoMessage.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerDeviceInfoMessage.h; sourceTree = "<group>"; };
+		397F6A86DE01FE2EE7B4E38E9C3C67C8 /* UIImage+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIImage+AutoTrack.h"; sourceTree = "<group>"; };
+		41E7C785A3BA9FC2AC2BA944F80D2FA5 /* UIView+SAHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SAHelpers.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIView+SAHelpers.h"; sourceTree = "<group>"; };
+		438C565C82B69E5D1751918BA1B68C71 /* SAUIControlBinding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAUIControlBinding.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAUIControlBinding.m; sourceTree = "<group>"; };
+		4B0F1065B2C94A7A6EF117A2A9323728 /* SAEnumDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAEnumDescription.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAEnumDescription.h; sourceTree = "<group>"; };
+		4CC0CB6118147DE1C9F119AE0B1985CA /* AutoTrackUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AutoTrackUtils.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/AutoTrackUtils.m; sourceTree = "<group>"; };
+		552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		5865F96EF7651C7407A9D16F19922826 /* UITableView+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UITableView+AutoTrack.m"; sourceTree = "<group>"; };
+		590A63AA5147D78035F9330E730F2E35 /* SensorsAnalyticsSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsSDK.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.h; sourceTree = "<group>"; };
+		5C9FC99FB6DAEC610979690CD28ADD7E /* SADesignerSessionCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SADesignerSessionCollection.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerSessionCollection.h; sourceTree = "<group>"; };
+		5D2DB58911DC0471BE7C57A3E500D9C8 /* UIView+SAHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SAHelpers.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIView+SAHelpers.m"; sourceTree = "<group>"; };
+		5FB29890FC53A249ED0EC0AE32404131 /* SAReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAReachability.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAReachability.m; sourceTree = "<group>"; };
+		6028157A2219B001160A35FC5AFE2D36 /* SensorsAnalyticsSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SensorsAnalyticsSDK-prefix.pch"; sourceTree = "<group>"; };
+		614C7B295A9EAD1CB2C6C40C8ADFD5D2 /* UIAlertView+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIAlertView+AutoTrack.m"; sourceTree = "<group>"; };
+		6250F7C5B56CCD0F8B7BCC9760DA083C /* SAValueTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAValueTransformers.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAValueTransformers.m; sourceTree = "<group>"; };
+		65E8740587FD45C881BCD83FDB35DF1E /* SAPropertyDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAPropertyDescription.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAPropertyDescription.m; sourceTree = "<group>"; };
+		66044ED1DB96715175E33FC530CCE3BD /* SensorsAnalyticsSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SensorsAnalyticsSDK-umbrella.h"; sourceTree = "<group>"; };
+		67F6780262FE85FD912D0C556CF03B73 /* SAAbstractDesignerMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAAbstractDesignerMessage.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAAbstractDesignerMessage.h; sourceTree = "<group>"; };
+		699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		6BBE15DDE5445058D47E9B446D7471E3 /* UIViewController+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIViewController+AutoTrack.m"; sourceTree = "<group>"; };
+		6FBBBAD347E209208CCD56DD890BB19B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		71BFA8D30FAA31F94CC7E0A309EFAF0F /* UIActionSheet+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIActionSheet+AutoTrack.h"; sourceTree = "<group>"; };
+		7276E097D2E11DEDDC32E55A1937ABA6 /* NSInvocation+SAHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+SAHelpers.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/NSInvocation+SAHelpers.h"; sourceTree = "<group>"; };
+		73A1ACEC876979A9A2510BD5B9572425 /* SAUITableViewBinding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAUITableViewBinding.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAUITableViewBinding.m; sourceTree = "<group>"; };
+		764D33E23CE6C1111110B04F5CBADADB /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7AA702535C8565ECDCAA05600AFC9FC4 /* SAObjectSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAObjectSelector.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSelector.m; sourceTree = "<group>"; };
+		7BD4D20B59D2D179EB1A972772F59382 /* SensorsAnalyticsSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsSDK.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.m; sourceTree = "<group>"; };
+		7DAAECD63A00DABF1302CDBA2FED07F9 /* SADesignerConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SADesignerConnection.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerConnection.h; sourceTree = "<group>"; };
+		7DB4B5F3D9D24DA0F7E224160DC3221A /* JSONUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONUtil.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/JSONUtil.h; sourceTree = "<group>"; };
+		82CA06AB146E07D885FAAA9FFDF575F1 /* SAObjectSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAObjectSerializer.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSerializer.h; sourceTree = "<group>"; };
+		8C088CFFEB212D73C6DD41BBA0DC0158 /* SAWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAWebSocket.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAWebSocket.m; sourceTree = "<group>"; };
+		8CFF8CE79C9F3D13EC10B2611B950ACB /* SADesignerDisconnectMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SADesignerDisconnectMessage.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerDisconnectMessage.m; sourceTree = "<group>"; };
+		93937D08E90D9B71357FD159F6DF8375 /* SensorsAnalyticsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SensorsAnalyticsSDK.framework; path = SensorsAnalyticsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95673F0527AF1FEBE55871FE9D7D0741 /* SensorsAnalyticsSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SensorsAnalyticsSDK.modulemap; sourceTree = "<group>"; };
+		9712697389837AB684AD51BC2FCE07A0 /* SATypeDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SATypeDescription.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SATypeDescription.h; sourceTree = "<group>"; };
+		9813957B3474A68153D7DDA28F4E0B1C /* AutoTrackUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AutoTrackUtils.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/AutoTrackUtils.h; sourceTree = "<group>"; };
+		9AC5B5FA512437FF2442E22A3EE2472B /* JSONUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONUtil.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/JSONUtil.m; sourceTree = "<group>"; };
+		9DFD79368B0EB9718F3E3138E9B3CA59 /* SALogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SALogger.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SALogger.h; sourceTree = "<group>"; };
+		9E2C0AB767776D33E23F88B4DF0C7070 /* SADesignerEventBindingMesssage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SADesignerEventBindingMesssage.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerEventBindingMesssage.m; sourceTree = "<group>"; };
+		9E6CB3994F7DB2A4EB6A703F92739257 /* SensorsAnalyticsSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SensorsAnalyticsSDK.xcconfig; sourceTree = "<group>"; };
+		9F2AB775B0802810684D5FEDF632D224 /* SAObjectIdentityProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAObjectIdentityProvider.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectIdentityProvider.m; sourceTree = "<group>"; };
+		A4548C5971D34D0DC570374AA04A34B9 /* SADesignerDeviceInfoMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SADesignerDeviceInfoMessage.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerDeviceInfoMessage.m; sourceTree = "<group>"; };
+		A60C9FAFF0F131559E91C905046E1408 /* UICollectionView+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UICollectionView+AutoTrack.m"; sourceTree = "<group>"; };
+		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AB133D45676F392135224D5325CDC05B /* SensorsAnalyticsSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SensorsAnalyticsSDK-dummy.m"; sourceTree = "<group>"; };
+		AB4B98C43186F45F7B36DD9B09C5A420 /* SADesignerMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SADesignerMessage.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerMessage.h; sourceTree = "<group>"; };
+		AC7D6517348FAD4A0DCB082829958858 /* SADesignerDisconnectMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SADesignerDisconnectMessage.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerDisconnectMessage.h; sourceTree = "<group>"; };
+		AD2069D40171AB5400487E8EEA40357C /* UIActionSheet+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIActionSheet+AutoTrack.m"; sourceTree = "<group>"; };
+		B52D8D68E61308D86022B3162B8DCC9C /* SAAbstractDesignerMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAAbstractDesignerMessage.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAAbstractDesignerMessage.m; sourceTree = "<group>"; };
+		B7030604B50671F3077F70474A9FC616 /* SAValueTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAValueTransformers.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAValueTransformers.h; sourceTree = "<group>"; };
+		B78D67324E74EDB48DB1C6322B35D32E /* SAObjectSerializerConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAObjectSerializerConfig.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSerializerConfig.h; sourceTree = "<group>"; };
+		B8467B044C7ED0ECF00C602D150823CA /* SAEnumDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAEnumDescription.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAEnumDescription.m; sourceTree = "<group>"; };
+		B890D26AD98DAB269F25B7976BA2AFC4 /* UICollectionView+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UICollectionView+AutoTrack.h"; sourceTree = "<group>"; };
+		BB0F19CA79A832512B551326B41D3EEE /* SAObjectSerializerConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAObjectSerializerConfig.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSerializerConfig.m; sourceTree = "<group>"; };
+		BF4C7910E5C294D289F5A52B9CB5F072 /* UIApplication+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIApplication+AutoTrack.h"; sourceTree = "<group>"; };
+		BFD61C916894CF056A565CEDD0FC7A60 /* SAObjectSerializerContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAObjectSerializerContext.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSerializerContext.h; sourceTree = "<group>"; };
+		C4B1767AE8CE61BC4BED6B37585B13E3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		C549F0142F0A8944E63A85FB1A5E1408 /* UITableView+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UITableView+AutoTrack.h"; sourceTree = "<group>"; };
+		C8BF8A6AC3177F907076FAE6C28CF4C6 /* UIApplication+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIApplication+AutoTrack.m"; sourceTree = "<group>"; };
+		C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
+		CAD9652C8D6E8648584944075DAFB8E7 /* MessageQueueBySqlite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MessageQueueBySqlite.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/MessageQueueBySqlite.m; sourceTree = "<group>"; };
+		CC9E7D3D605109E85F08EADB51AE237F /* UIViewController+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AutoTrack.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UIViewController+AutoTrack.h"; sourceTree = "<group>"; };
+		CF57C3E3B78ACCE474A46068A37BC91C /* SASwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SASwizzler.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SASwizzler.m; sourceTree = "<group>"; };
+		D0C13B1CB2CDAF8A6171303B31347992 /* SAObjectSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAObjectSelector.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSelector.h; sourceTree = "<group>"; };
+		D0D17FB85144BA5B4FE01E34C3077A91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D474B46BB70B79DF482E9B9198025DAF /* SASwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SASwizzle.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SASwizzle.m; sourceTree = "<group>"; };
+		D8ED138B317A4B891CE763881FA469E8 /* SAEventBinding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAEventBinding.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAEventBinding.h; sourceTree = "<group>"; };
+		DE22D61D34ECE0B04E3695864D96DD9C /* NSInvocation+SAHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+SAHelpers.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/NSInvocation+SAHelpers.m"; sourceTree = "<group>"; };
+		E3DFB75C22BAA9173D27852B5D41CB87 /* SAObjectSerializerContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAObjectSerializerContext.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSerializerContext.m; sourceTree = "<group>"; };
+		E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		E7429995470E1412D2BEA62D15739A9A /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E775FBD1483DD13BCCDBAB86D98D94F0 /* SAEventBinding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAEventBinding.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAEventBinding.m; sourceTree = "<group>"; };
+		E7BC042C7B9160B21A23C8592AB0AA89 /* LFCGzipUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFCGzipUtility.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/LFCGzipUtility.m; sourceTree = "<group>"; };
+		E922B2CFF535F4045756B9753203AC38 /* LFCGzipUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFCGzipUtility.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/LFCGzipUtility.h; sourceTree = "<group>"; };
+		EA0AFB3231D93C95EEA5BAA3F5D91423 /* SADesignerSnapshotMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SADesignerSnapshotMessage.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SADesignerSnapshotMessage.h; sourceTree = "<group>"; };
+		EA36F9AD4168A08F4C735081468DDA34 /* SAClassDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAClassDescription.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAClassDescription.h; sourceTree = "<group>"; };
+		EA6F1074FD698051B970AFD3F2744335 /* SASwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SASwizzler.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SASwizzler.h; sourceTree = "<group>"; };
+		ECA889568E5C103D2C561FF9767F0DF0 /* SAUIControlBinding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAUIControlBinding.h; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAUIControlBinding.h; sourceTree = "<group>"; };
+		EF2557CBDA4776FC0F31467DF77FC320 /* UITabBar+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+AutoTrack.m"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/UITabBar+AutoTrack.m"; sourceTree = "<group>"; };
+		EF8842A3A784EFD1AAD3419D39C769D2 /* NSString+HashCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HashCode.h"; path = "SensorsAnalyticsSDK/SensorsAnalyticsSDK/NSString+HashCode.h"; sourceTree = "<group>"; };
+		EFFB74AAA6B2AE8DABF0E88E61E09178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F525EFEF592C07EFCA35FCD93CAD3F92 /* SAClassDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAClassDescription.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAClassDescription.m; sourceTree = "<group>"; };
+		F57F06D750EFFCEE1F12C75662637EA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F8DDEA98A8B931264CAB7DAA9C41A852 /* SAApplicationStateSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAApplicationStateSerializer.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAApplicationStateSerializer.m; sourceTree = "<group>"; };
+		FAB7E1B433C31F4D4AA0F7E1AE38D267 /* SAObjectSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAObjectSerializer.m; path = SensorsAnalyticsSDK/SensorsAnalyticsSDK/SAObjectSerializer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42E1814DE8F8DFB47EC5887B8105E756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5528CBAF0A6B4D8BF1D24F6016A528 /* CoreGraphics.framework in Frameworks */,
+				889CE8CC45ACD6C072AC09F3DC3DE74A /* CoreTelephony.framework in Frameworks */,
+				899DCFFED595F4B290EAB0A9A11E5B89 /* Foundation.framework in Frameworks */,
+				193ECA73B7A9EC2F702B633F103B9F19 /* QuartzCore.framework in Frameworks */,
+				C2E647882B161866F9F51D3CBBF7DE70 /* SystemConfiguration.framework in Frameworks */,
+				9590D5FC73B1B64871E67201F3A0EDC2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9851E2DBBEB699FF01200C53355F5389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F7445B2E5B9AC64D4D0A4F45E1CEC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F3DF5AF95A500B685E1FCB69AA5983E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				149A790F8BDB0EFCA2273B5EEBD49C09 /* SensorsAnalyticsSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D534A14ED13106702037618D632ADEA1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		149A790F8BDB0EFCA2273B5EEBD49C09 /* SensorsAnalyticsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1E75780DCE45440B4AAEF162898A0C1C /* core */,
+				E8BB3DA56D87F0CE579CB7AD4FD7DBEB /* Support Files */,
+			);
+			name = SensorsAnalyticsSDK;
+			path = SensorsAnalyticsSDK;
+			sourceTree = "<group>";
+		};
+		1E75780DCE45440B4AAEF162898A0C1C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				9813957B3474A68153D7DDA28F4E0B1C /* AutoTrackUtils.h */,
+				4CC0CB6118147DE1C9F119AE0B1985CA /* AutoTrackUtils.m */,
+				7DB4B5F3D9D24DA0F7E224160DC3221A /* JSONUtil.h */,
+				9AC5B5FA512437FF2442E22A3EE2472B /* JSONUtil.m */,
+				E922B2CFF535F4045756B9753203AC38 /* LFCGzipUtility.h */,
+				E7BC042C7B9160B21A23C8592AB0AA89 /* LFCGzipUtility.m */,
+				0A87C15FCF2DB3854F6D3DC331393BCC /* MessageQueueBySqlite.h */,
+				CAD9652C8D6E8648584944075DAFB8E7 /* MessageQueueBySqlite.m */,
+				10E0D6139D7FE3F7395FA5A435135E0A /* NSData+SABase64.h */,
+				0EAFB359F5115477762BFC28BAEB1533 /* NSData+SABase64.m */,
+				7276E097D2E11DEDDC32E55A1937ABA6 /* NSInvocation+SAHelpers.h */,
+				DE22D61D34ECE0B04E3695864D96DD9C /* NSInvocation+SAHelpers.m */,
+				EF8842A3A784EFD1AAD3419D39C769D2 /* NSString+HashCode.h */,
+				21DC413A0A4CD6604638E31483E8AE1D /* NSString+HashCode.m */,
+				67F6780262FE85FD912D0C556CF03B73 /* SAAbstractDesignerMessage.h */,
+				B52D8D68E61308D86022B3162B8DCC9C /* SAAbstractDesignerMessage.m */,
+				230FD6EC74596142904A6020D28D562D /* SAApplicationStateSerializer.h */,
+				F8DDEA98A8B931264CAB7DAA9C41A852 /* SAApplicationStateSerializer.m */,
+				EA36F9AD4168A08F4C735081468DDA34 /* SAClassDescription.h */,
+				F525EFEF592C07EFCA35FCD93CAD3F92 /* SAClassDescription.m */,
+				7DAAECD63A00DABF1302CDBA2FED07F9 /* SADesignerConnection.h */,
+				336E2C40381A2DEB082E045BB08488A2 /* SADesignerConnection.m */,
+				38BC93ED9268D3C45C5FCF0FC5E99B79 /* SADesignerDeviceInfoMessage.h */,
+				A4548C5971D34D0DC570374AA04A34B9 /* SADesignerDeviceInfoMessage.m */,
+				AC7D6517348FAD4A0DCB082829958858 /* SADesignerDisconnectMessage.h */,
+				8CFF8CE79C9F3D13EC10B2611B950ACB /* SADesignerDisconnectMessage.m */,
+				26ABDB25A0C4FEA626B533C7B4A70E97 /* SADesignerEventBindingMessage.h */,
+				9E2C0AB767776D33E23F88B4DF0C7070 /* SADesignerEventBindingMesssage.m */,
+				AB4B98C43186F45F7B36DD9B09C5A420 /* SADesignerMessage.h */,
+				5C9FC99FB6DAEC610979690CD28ADD7E /* SADesignerSessionCollection.h */,
+				EA0AFB3231D93C95EEA5BAA3F5D91423 /* SADesignerSnapshotMessage.h */,
+				12022176AF302B17B715C76FF7789E35 /* SADesignerSnapshotMessage.m */,
+				4B0F1065B2C94A7A6EF117A2A9323728 /* SAEnumDescription.h */,
+				B8467B044C7ED0ECF00C602D150823CA /* SAEnumDescription.m */,
+				D8ED138B317A4B891CE763881FA469E8 /* SAEventBinding.h */,
+				E775FBD1483DD13BCCDBAB86D98D94F0 /* SAEventBinding.m */,
+				9DFD79368B0EB9718F3E3138E9B3CA59 /* SALogger.h */,
+				1AD842ADFF28E4283916B6AC6FE096BE /* SAObjectIdentityProvider.h */,
+				9F2AB775B0802810684D5FEDF632D224 /* SAObjectIdentityProvider.m */,
+				D0C13B1CB2CDAF8A6171303B31347992 /* SAObjectSelector.h */,
+				7AA702535C8565ECDCAA05600AFC9FC4 /* SAObjectSelector.m */,
+				82CA06AB146E07D885FAAA9FFDF575F1 /* SAObjectSerializer.h */,
+				FAB7E1B433C31F4D4AA0F7E1AE38D267 /* SAObjectSerializer.m */,
+				B78D67324E74EDB48DB1C6322B35D32E /* SAObjectSerializerConfig.h */,
+				BB0F19CA79A832512B551326B41D3EEE /* SAObjectSerializerConfig.m */,
+				BFD61C916894CF056A565CEDD0FC7A60 /* SAObjectSerializerContext.h */,
+				E3DFB75C22BAA9173D27852B5D41CB87 /* SAObjectSerializerContext.m */,
+				1916999AF19535EAE28224424439177D /* SAPropertyDescription.h */,
+				65E8740587FD45C881BCD83FDB35DF1E /* SAPropertyDescription.m */,
+				1A8241C578048D6CF4E153670800D6EC /* SAReachability.h */,
+				5FB29890FC53A249ED0EC0AE32404131 /* SAReachability.m */,
+				328DE55C16C5A29814636BCDA736B417 /* SASwizzle.h */,
+				D474B46BB70B79DF482E9B9198025DAF /* SASwizzle.m */,
+				EA6F1074FD698051B970AFD3F2744335 /* SASwizzler.h */,
+				CF57C3E3B78ACCE474A46068A37BC91C /* SASwizzler.m */,
+				9712697389837AB684AD51BC2FCE07A0 /* SATypeDescription.h */,
+				0D45BEEDC89218D95B605329800AE511 /* SATypeDescription.m */,
+				ECA889568E5C103D2C561FF9767F0DF0 /* SAUIControlBinding.h */,
+				438C565C82B69E5D1751918BA1B68C71 /* SAUIControlBinding.m */,
+				2CE9A880A42F0B6D4531D46A3FEB484A /* SAUITableViewBinding.h */,
+				73A1ACEC876979A9A2510BD5B9572425 /* SAUITableViewBinding.m */,
+				B7030604B50671F3077F70474A9FC616 /* SAValueTransformers.h */,
+				6250F7C5B56CCD0F8B7BCC9760DA083C /* SAValueTransformers.m */,
+				0B6607309724D19D6E7254D95B535AE2 /* SAWebSocket.h */,
+				8C088CFFEB212D73C6DD41BBA0DC0158 /* SAWebSocket.m */,
+				590A63AA5147D78035F9330E730F2E35 /* SensorsAnalyticsSDK.h */,
+				7BD4D20B59D2D179EB1A972772F59382 /* SensorsAnalyticsSDK.m */,
+				71BFA8D30FAA31F94CC7E0A309EFAF0F /* UIActionSheet+AutoTrack.h */,
+				AD2069D40171AB5400487E8EEA40357C /* UIActionSheet+AutoTrack.m */,
+				1DD4C3054ED88625EBB01FCC1BDF6DA9 /* UIAlertView+AutoTrack.h */,
+				614C7B295A9EAD1CB2C6C40C8ADFD5D2 /* UIAlertView+AutoTrack.m */,
+				BF4C7910E5C294D289F5A52B9CB5F072 /* UIApplication+AutoTrack.h */,
+				C8BF8A6AC3177F907076FAE6C28CF4C6 /* UIApplication+AutoTrack.m */,
+				B890D26AD98DAB269F25B7976BA2AFC4 /* UICollectionView+AutoTrack.h */,
+				A60C9FAFF0F131559E91C905046E1408 /* UICollectionView+AutoTrack.m */,
+				397F6A86DE01FE2EE7B4E38E9C3C67C8 /* UIImage+AutoTrack.h */,
+				14E7FED607BCEE4E194F21375304C2A1 /* UIImage+AutoTrack.m */,
+				2435F325C719A002AF14B6E233C82490 /* UITabBar+AutoTrack.h */,
+				EF2557CBDA4776FC0F31467DF77FC320 /* UITabBar+AutoTrack.m */,
+				C549F0142F0A8944E63A85FB1A5E1408 /* UITableView+AutoTrack.h */,
+				5865F96EF7651C7407A9D16F19922826 /* UITableView+AutoTrack.m */,
+				41E7C785A3BA9FC2AC2BA944F80D2FA5 /* UIView+SAHelpers.h */,
+				5D2DB58911DC0471BE7C57A3E500D9C8 /* UIView+SAHelpers.m */,
+				CC9E7D3D605109E85F08EADB51AE237F /* UIViewController+AutoTrack.h */,
+				6BBE15DDE5445058D47E9B446D7471E3 /* UIViewController+AutoTrack.m */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE9811ABEB5931E154211FCA14B78350 /* Pods-Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
+				0F3DF5AF95A500B685E1FCB69AA5983E /* Pods */,
+				80766B499D30BA694FB9FCB921A015B8 /* Products */,
+				6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80766B499D30BA694FB9FCB921A015B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7429995470E1412D2BEA62D15739A9A /* Pods_Example.framework */,
+				93937D08E90D9B71357FD159F6DF8375 /* SensorsAnalyticsSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D534A14ED13106702037618D632ADEA1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3331585A11D7AADE76D9E81B4DC244D9 /* CoreGraphics.framework */,
+				292C2D4E6F647FDDDFD4485E8331986D /* CoreTelephony.framework */,
+				F57F06D750EFFCEE1F12C75662637EA8 /* Foundation.framework */,
+				28B943FF5EED37D5AE080CC2050AB25D /* QuartzCore.framework */,
+				C4B1767AE8CE61BC4BED6B37585B13E3 /* SystemConfiguration.framework */,
+				6FBBBAD347E209208CCD56DD890BB19B /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E8BB3DA56D87F0CE579CB7AD4FD7DBEB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D17FB85144BA5B4FE01E34C3077A91 /* Info.plist */,
+				95673F0527AF1FEBE55871FE9D7D0741 /* SensorsAnalyticsSDK.modulemap */,
+				9E6CB3994F7DB2A4EB6A703F92739257 /* SensorsAnalyticsSDK.xcconfig */,
+				AB133D45676F392135224D5325CDC05B /* SensorsAnalyticsSDK-dummy.m */,
+				6028157A2219B001160A35FC5AFE2D36 /* SensorsAnalyticsSDK-prefix.pch */,
+				66044ED1DB96715175E33FC530CCE3BD /* SensorsAnalyticsSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SensorsAnalyticsSDK";
+			sourceTree = "<group>";
+		};
+		FE9811ABEB5931E154211FCA14B78350 /* Pods-Example */ = {
+			isa = PBXGroup;
+			children = (
+				EFFB74AAA6B2AE8DABF0E88E61E09178 /* Info.plist */,
+				119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */,
+				A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */,
+				764D33E23CE6C1111110B04F5CBADADB /* Pods-Example-acknowledgements.plist */,
+				699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */,
+				552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */,
+				01E6907CF2644EB1CF8E23F708A3DA0B /* Pods-Example-resources.sh */,
+				C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */,
+				149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */,
+				E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */,
+			);
+			name = "Pods-Example";
+			path = "Target Support Files/Pods-Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		42B08687BD1697F5A493C20DCA41639E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F435F594A8849493078818868A91119F /* AutoTrackUtils.h in Headers */,
+				C2D28A1793D2B18AD418585F1C7C47B0 /* JSONUtil.h in Headers */,
+				D2F4B01C041C92909668844CCD341854 /* LFCGzipUtility.h in Headers */,
+				4051F3181DB5CA8BEEBB5CFA95812D9B /* MessageQueueBySqlite.h in Headers */,
+				70C0F9D088C32D85980A5C148D6CB66B /* NSData+SABase64.h in Headers */,
+				2A2A1533496979E923BBB7D46F384996 /* NSInvocation+SAHelpers.h in Headers */,
+				A40BF910F78FC54C172FAC34727DFE8B /* NSString+HashCode.h in Headers */,
+				EECDAF21D36280EB0A43A08A8126518B /* SAAbstractDesignerMessage.h in Headers */,
+				B029F6F57D1FED8C50E09C688D61F156 /* SAApplicationStateSerializer.h in Headers */,
+				8F29494FD31FAD91F41A24B43E89E48B /* SAClassDescription.h in Headers */,
+				F19E7253FFE92E86CD1BB9F649738E10 /* SADesignerConnection.h in Headers */,
+				AC3D447030FDFEC7585AEC2721B8A98C /* SADesignerDeviceInfoMessage.h in Headers */,
+				5D8DBED3874C787841E6D65289CB56DA /* SADesignerDisconnectMessage.h in Headers */,
+				B8972FE615D0F2975E399431155CF760 /* SADesignerEventBindingMessage.h in Headers */,
+				39E184EAB43D97A5BC15AC824269FA27 /* SADesignerMessage.h in Headers */,
+				8F12AB2DC5B7C64348F25605DFC7CE98 /* SADesignerSessionCollection.h in Headers */,
+				A6712A27BBAF54E478CB531BBFB1B5B0 /* SADesignerSnapshotMessage.h in Headers */,
+				258F505DA650BE13FD6FC34A7B8DDF8E /* SAEnumDescription.h in Headers */,
+				6583D55087DF5BE32D08ADC7A30618DD /* SAEventBinding.h in Headers */,
+				20466338AA6BDCC95BAA41C906035897 /* SALogger.h in Headers */,
+				7FE67F7C85720921FFE4F285E308921A /* SAObjectIdentityProvider.h in Headers */,
+				B60D3B2E91634F49C25871F0AF78BE4F /* SAObjectSelector.h in Headers */,
+				357F98766CF8AB60F2F7F499ADB112C6 /* SAObjectSerializer.h in Headers */,
+				DAE13C2ACD23137A53E4E2C1AB428A09 /* SAObjectSerializerConfig.h in Headers */,
+				AFC92CCB48EB552A92263F20C053C9A7 /* SAObjectSerializerContext.h in Headers */,
+				B70FC13089BCF7CECC697DA34DB71A53 /* SAPropertyDescription.h in Headers */,
+				F349595F3AFF862AFBAD88CD9E3D6595 /* SAReachability.h in Headers */,
+				02F8E13D89A0FA86E092AE9FA154F73A /* SASwizzle.h in Headers */,
+				B48C58DC6F382B0001C4D89836EEA0D5 /* SASwizzler.h in Headers */,
+				23DB48194868529B8ACA9A9C69E4BBAF /* SATypeDescription.h in Headers */,
+				034D925D9D1158D2E8822471EDF8F90B /* SAUIControlBinding.h in Headers */,
+				B6D03AD52DC836D7843A9AF8703D48A4 /* SAUITableViewBinding.h in Headers */,
+				C285326208164EE56B682FDC7BDD7DA7 /* SAValueTransformers.h in Headers */,
+				AA5C5BBDBF5F29EB26E3362E2ED1B6A8 /* SAWebSocket.h in Headers */,
+				3321235284674AB2942C52C53271D909 /* SensorsAnalyticsSDK-umbrella.h in Headers */,
+				C9A300F4F3624CC168320CCD6B6EB0BC /* SensorsAnalyticsSDK.h in Headers */,
+				74BDA048F1E16438F29A51E3D53678E8 /* UIActionSheet+AutoTrack.h in Headers */,
+				B96A67449F9B7236BEEC0B34D7D52E71 /* UIAlertView+AutoTrack.h in Headers */,
+				F73C90CB51446A80A8658664CCEFE7C6 /* UIApplication+AutoTrack.h in Headers */,
+				103036CEF3F0865FD33085F99A03514C /* UICollectionView+AutoTrack.h in Headers */,
+				9EBA00CCECD8A6B8BB95595BDF1DE6A3 /* UIImage+AutoTrack.h in Headers */,
+				303E7A8A2049550295C4B8C577225CB7 /* UITabBar+AutoTrack.h in Headers */,
+				BBADA3ECD3B42CBA1D940029632A7EA2 /* UITableView+AutoTrack.h in Headers */,
+				556B42D826032350CA200C01592DFA80 /* UIView+SAHelpers.h in Headers */,
+				005A2E0995EF33FC0FF1032D7919F9FD /* UIViewController+AutoTrack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5F65376B5365BE9196696307F033E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9DCE74F2556BA806A1B5F52B8ABC75C /* Pods-Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2ECAEBD941AD20C00E2FEF3B846C2A64 /* SensorsAnalyticsSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3300CB65AD0AFFCA97E660E11C6794B8 /* Build configuration list for PBXNativeTarget "SensorsAnalyticsSDK" */;
+			buildPhases = (
+				77EEB828E8D838E4B53834E1D9DAA5B4 /* Sources */,
+				42E1814DE8F8DFB47EC5887B8105E756 /* Frameworks */,
+				42B08687BD1697F5A493C20DCA41639E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SensorsAnalyticsSDK;
+			productName = SensorsAnalyticsSDK;
+			productReference = 93937D08E90D9B71357FD159F6DF8375 /* SensorsAnalyticsSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6930CE11C4929057AFBA067CCDAE5AFA /* Pods-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDAE59778C9E7D3E57AD9B92D58BB34B /* Build configuration list for PBXNativeTarget "Pods-Example" */;
+			buildPhases = (
+				AB6F701748EB0F7A2AA48EFF65C96EAB /* Sources */,
+				9851E2DBBEB699FF01200C53355F5389 /* Frameworks */,
+				AB5F65376B5365BE9196696307F033E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				717B1176D0644194398FA2C48B982239 /* PBXTargetDependency */,
+			);
+			name = "Pods-Example";
+			productName = "Pods-Example";
+			productReference = E7429995470E1412D2BEA62D15739A9A /* Pods_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 80766B499D30BA694FB9FCB921A015B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6930CE11C4929057AFBA067CCDAE5AFA /* Pods-Example */,
+				2ECAEBD941AD20C00E2FEF3B846C2A64 /* SensorsAnalyticsSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77EEB828E8D838E4B53834E1D9DAA5B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079211A68819D0CBF5B20DB6BDF1225F /* AutoTrackUtils.m in Sources */,
+				2FD6846F1305D99322C0F6C65A70653E /* JSONUtil.m in Sources */,
+				2331CEBAFCAA1BD436786021C79EF1D0 /* LFCGzipUtility.m in Sources */,
+				33A95599527DC6DA5CA1C1C960A18F9E /* MessageQueueBySqlite.m in Sources */,
+				BFF8686900CCF9C41D025D7577247E23 /* NSData+SABase64.m in Sources */,
+				4A375A6B856BC255C88ECFFE9E745B37 /* NSInvocation+SAHelpers.m in Sources */,
+				44001B3113D517EE8A7D6F5BBDD2EFCC /* NSString+HashCode.m in Sources */,
+				956DE536F233C7F18CE7095135E969B0 /* SAAbstractDesignerMessage.m in Sources */,
+				E0C409202A45A367EF81CDAB297FA139 /* SAApplicationStateSerializer.m in Sources */,
+				31BDFA416702E98912AAD9844229A3E7 /* SAClassDescription.m in Sources */,
+				47595769F32730C7D5420DBAF4776A91 /* SADesignerConnection.m in Sources */,
+				F2EECA285A035CA38622CC2796F9718C /* SADesignerDeviceInfoMessage.m in Sources */,
+				46F635D8EAC0ABF94CD81996D35C7113 /* SADesignerDisconnectMessage.m in Sources */,
+				BC35ABEC1060567118B4FDD1970A815E /* SADesignerEventBindingMesssage.m in Sources */,
+				BCA447C8C6A18FF8D1981D572330030D /* SADesignerSnapshotMessage.m in Sources */,
+				0E20E8FC8A4C27E7DE6577C5DE2F0405 /* SAEnumDescription.m in Sources */,
+				2D5A9802154FB68239F32808714DF152 /* SAEventBinding.m in Sources */,
+				430740C57BF1D97AF3D2C807C1B426EA /* SAObjectIdentityProvider.m in Sources */,
+				EA9E3D4A4C7F08DA896026F30ED64607 /* SAObjectSelector.m in Sources */,
+				A71BC757CEFDD79D55968AC36DF9917C /* SAObjectSerializer.m in Sources */,
+				4757EE6CB581171EC5F4CDF85C26C076 /* SAObjectSerializerConfig.m in Sources */,
+				11B3938225F5C517503AF16AE1B2B90A /* SAObjectSerializerContext.m in Sources */,
+				3D63B43077DF4322FB3C3188EB1B8752 /* SAPropertyDescription.m in Sources */,
+				A5DC8163BD1F07085FC89040D27DC530 /* SAReachability.m in Sources */,
+				0E2FC9E77B61DB1A2E939B7B95BBFED3 /* SASwizzle.m in Sources */,
+				53E240906F9734B0C9F513C78BAD2727 /* SASwizzler.m in Sources */,
+				83B20EB5C43C02B1A5C2306C6A33E9EB /* SATypeDescription.m in Sources */,
+				51242E3396823484BAEB2BD1C08A6232 /* SAUIControlBinding.m in Sources */,
+				E8D876B9698CEA30C2034F1CA4FD4222 /* SAUITableViewBinding.m in Sources */,
+				DA0131B235E0C596F80A3643844DBF17 /* SAValueTransformers.m in Sources */,
+				344F086C0878D53F2BD1119961038417 /* SAWebSocket.m in Sources */,
+				B14CDDDB948A5BDD97C1512ED9AF7236 /* SensorsAnalyticsSDK-dummy.m in Sources */,
+				1FDF85A1D89A23A9834FD7421FB5ED4A /* SensorsAnalyticsSDK.m in Sources */,
+				176E07795EC907EA3A85E528D4B80F77 /* UIActionSheet+AutoTrack.m in Sources */,
+				FBDCF81DBE8F39905C13CB4287545ECA /* UIAlertView+AutoTrack.m in Sources */,
+				ED16D0E237122454B52DDD6E0F4CEC23 /* UIApplication+AutoTrack.m in Sources */,
+				6826BA7A8286E370F880F5BDF3AA80A7 /* UICollectionView+AutoTrack.m in Sources */,
+				068F7B95838C864DBAE4C7103118266F /* UIImage+AutoTrack.m in Sources */,
+				D3FA468E94AD6FEF814BA799756ACAED /* UITabBar+AutoTrack.m in Sources */,
+				7409B17659827223AC4955D7BAB2F89C /* UITableView+AutoTrack.m in Sources */,
+				F361080100E5B70E65EE0EE9385D4C2B /* UIView+SAHelpers.m in Sources */,
+				39AEF877E85A0B60B74AE969930FF619 /* UIViewController+AutoTrack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6F701748EB0F7A2AA48EFF65C96EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2AA58C872E20376D217A4FD55AC1341 /* Pods-Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		717B1176D0644194398FA2C48B982239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SensorsAnalyticsSDK;
+			target = 2ECAEBD941AD20C00E2FEF3B846C2A64 /* SensorsAnalyticsSDK */;
+			targetProxy = AA30EE1A96CFC61950D7B76BB514490D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1620458EE3055C9A204DCF068047B2DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E6CB3994F7DB2A4EB6A703F92739257 /* SensorsAnalyticsSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/SensorsAnalyticsSDK/SensorsAnalyticsSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SensorsAnalyticsSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SensorsAnalyticsSDK/SensorsAnalyticsSDK.modulemap";
+				PRODUCT_NAME = SensorsAnalyticsSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		165356651B7D6D56F96E0C51E4D0801E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		78362B18D3668ECA676A89E3E6523F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E6CB3994F7DB2A4EB6A703F92739257 /* SensorsAnalyticsSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/SensorsAnalyticsSDK/SensorsAnalyticsSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SensorsAnalyticsSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SensorsAnalyticsSDK/SensorsAnalyticsSDK.modulemap";
+				PRODUCT_NAME = SensorsAnalyticsSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C4CA9179EF86F385874E918D43D2AD5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
+				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3300CB65AD0AFFCA97E660E11C6794B8 /* Build configuration list for PBXNativeTarget "SensorsAnalyticsSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1620458EE3055C9A204DCF068047B2DA /* Debug */,
+				78362B18D3668ECA676A89E3E6523F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAE59778C9E7D3E57AD9B92D58BB34B /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CA9179EF86F385874E918D43D2AD5A /* Debug */,
+				165356651B7D6D56F96E0C51E4D0801E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
