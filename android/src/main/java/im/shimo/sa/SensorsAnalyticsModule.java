@@ -170,13 +170,21 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void trackInstallation(String event, ReadableMap properties) {
         try {
-            SensorsDataAPI.sharedInstance(mContext).trackInstallation(event, convertMapToJson(properties));
+            JSONObject object = convertMapToJson(properties);
+            if (object == null) {
+                SensorsDataAPI.sharedInstance(mContext).trackInstallation(event);
+            } else {
+                SensorsDataAPI.sharedInstance(mContext).trackInstallation(event, object);
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 
     public static JSONObject convertMapToJson(ReadableMap readableMap) throws JSONException {
+        if (readableMap == null) {
+            return null;
+        }
         JSONObject object = new JSONObject();
         ReadableMapKeySetIterator iterator = readableMap.keySetIterator();
         while (iterator.hasNextKey()) {
