@@ -1,8 +1,5 @@
 apply plugin: "com.android.application"
 
-//添加 com.sensorsdata.analytics.android 插件
-apply plugin: 'com.sensorsdata.analytics.android'
-
 import com.android.build.OutputFile
 
 /**
@@ -151,4 +148,11 @@ dependencies {
 task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
+}
+
+//添加 com.sensorsdata.analytics.android 插件
+apply plugin: 'com.sensorsdata.analytics.android'
+
+sensorsAnalytics {
+    includeJarFilter 'support-v4', 'react-native','appcompat-v7'
 }

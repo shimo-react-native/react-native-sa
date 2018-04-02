@@ -9,7 +9,9 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Button,
+  Alert
 } from 'react-native';
 import SensorsAnalytics from 'react-native-sa';
 
@@ -23,9 +25,6 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   constructor(props) {
     super(props);
-    SensorsAnalytics.init({
-
-    });
   }
 
   render() {
@@ -40,6 +39,10 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <Button
+          title="Button"
+          onPress={()=> Alert.alert("点击")}>
+        </Button>
       </View>
     );
   }
