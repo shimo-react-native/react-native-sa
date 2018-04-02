@@ -7,10 +7,6 @@ buildscript {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        //添加 Sensors Analytics maven 库地址
-        maven {
-            url 'https://dl.bintray.com/zouyuhan/maven'
-        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
@@ -19,7 +15,7 @@ buildscript {
         // in the individual module build.gradle files
 
         //添加 Sensors Analytics android-gradle-plugin 依赖
-        classpath 'com.sensorsdata.analytics.android:android-gradle-plugin:1.2.0'
+        classpath 'com.sensorsdata.analytics.android:android-gradle-plugin:1.2.1'
     }
 }
 
@@ -34,11 +30,6 @@ allprojects {
         maven {
             url 'https://maven.google.com/'
             name 'Google'
-        }
-
-        //添加 Sensors Analytics maven 库地址
-        maven {
-            url 'https://dl.bintray.com/zouyuhan/maven'
         }
     }
 }
