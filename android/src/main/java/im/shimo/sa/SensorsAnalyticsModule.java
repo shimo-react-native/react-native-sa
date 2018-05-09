@@ -1,8 +1,5 @@
 package im.shimo.sa;
 
-import android.webkit.WebView;
-
-import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -10,10 +7,9 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.sensorsdata.analytics.android.sdk.SensorsDataAPI;
-import com.sensorsdata.analytics.android.sdk.SensorsDataAPI.DebugMode;
 import com.sensorsdata.analytics.android.sdk.SensorsDataAPI.AutoTrackEventType;
+import com.sensorsdata.analytics.android.sdk.SensorsDataAPI.DebugMode;
 import com.sensorsdata.analytics.android.sdk.SensorsDataAPI.NetworkType;
-import com.sensorsdata.analytics.android.sdk.util.SensorsDataUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,10 +24,23 @@ import java.util.List;
 
 public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     private ReactApplicationContext mContext;
+    private static SensorsAnalyticsModule analyticsModule;
+    private volatile boolean isInited;
+    private JSONObject mJsObject;
+    private String mJsEvent;
 
     public SensorsAnalyticsModule(ReactApplicationContext reactContext) {
         super(reactContext);
         mContext = reactContext;
+        analyticsModule = this;
+    }
+
+    public static SensorsAnalyticsModule getAnalyticsModule() {
+        return analyticsModule;
+    }
+
+    public void setInited(boolean inited) {
+        isInited = inited;
     }
 
     @Override
@@ -170,14 +179,20 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void trackInstallation(String event, ReadableMap properties) {
         try {
-            JSONObject object = convertMapToJson(properties);
-            if (object == null) {
-                SensorsDataAPI.sharedInstance(mContext).trackInstallation(event);
-            } else {
-                SensorsDataAPI.sharedInstance(mContext).trackInstallation(event, object);
-            }
+            mJsObject = convertMapToJson(properties);
+            mJsEvent = event;
+            trackInstallation();
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void trackInstallation() {
+        if (!isInited) return;
+        if (mJsObject == null) {
+            SensorsDataAPI.sharedInstance(mContext).trackInstallation(mJsEvent);
+        } else {
+            SensorsDataAPI.sharedInstance(mContext).trackInstallation(mJsEvent, mJsObject);
         }
     }
 
