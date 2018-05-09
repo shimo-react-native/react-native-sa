@@ -28,8 +28,7 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     private ReactApplicationContext mContext;
     private static SensorsAnalyticsModule analyticsModule;
     private JSONObject mJsObject;
-    private final static String INITED = "SensorsAnalyticsModule";
-    private String mJsEvent = INITED;
+    private String mJsEvent;
 
     public SensorsAnalyticsModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -196,14 +195,14 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     }
 
     public void trackInstallation() {
-        if (mJsEvent != null && mJsEvent.equals(INITED)) return;
+        if (mJsEvent == null) return;
         if (mJsObject == null) {
             SensorsDataAPI.sharedInstance(mContext).trackInstallation(mJsEvent);
         } else {
             SensorsDataAPI.sharedInstance(mContext).trackInstallation(mJsEvent, mJsObject);
         }
         mJsObject = null;
-        mJsEvent = INITED;
+        mJsEvent = null;
     }
 
     public static JSONObject convertMapToJson(ReadableMap readableMap) throws JSONException {
