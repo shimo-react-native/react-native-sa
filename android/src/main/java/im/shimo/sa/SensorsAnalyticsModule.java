@@ -53,7 +53,6 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void init(ReadableMap properties) {
         String serverUrl = properties.getString("serverUrl");
-        String configureURL = properties.getString("configureURL");
         int debugMode = properties.getInt("debugMode");
         DebugMode mode = DebugMode.DEBUG_OFF;
         if (debugMode == 1) {
@@ -61,7 +60,7 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
         } else if (debugMode == 2) {
             mode = DebugMode.DEBUG_AND_TRACK;
         }
-        SensorsDataAPI instance = SensorsDataAPI.sharedInstance(mContext, serverUrl, configureURL, mode);
+        SensorsDataAPI instance = SensorsDataAPI.sharedInstance(mContext, serverUrl, mode);
 
         // networkType
         ReadableArray networkTypes = properties.getArray("networkTypes");
