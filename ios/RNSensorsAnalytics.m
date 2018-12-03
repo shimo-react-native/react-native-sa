@@ -8,9 +8,9 @@ RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(init:(NSDictionary *)properties) {
     NSString *serverUrl = [properties objectForKey:@"serverUrl"];
-    NSString *configureURL = [properties objectForKey:@"configureURL"];
+    NSDictionary *andLaunchOptions = [properties objectForKey:@"andLaunchOptions"];
     NSNumber *debugMode = [properties objectForKey:@"debugMode"];
-    SensorsAnalyticsSDK *instance = [SensorsAnalyticsSDK sharedInstanceWithServerURL:serverUrl andConfigureURL:configureURL andDebugMode:(SensorsAnalyticsDebugMode)[debugMode integerValue]];
+    SensorsAnalyticsSDK *instance = [SensorsAnalyticsSDK sharedInstanceWithServerURL:serverUrl andLaunchOptions:andLaunchOptions andDebugMode:(SensorsAnalyticsDebugMode)[debugMode integerValue]];
     
     // networkType
     NSArray *networkTypes = [properties objectForKey:@"networkTypes"];
@@ -73,7 +73,7 @@ RCT_EXPORT_METHOD(track:(NSString *)event properties:(NSDictionary *)properties)
 }
 
 RCT_EXPORT_METHOD(trackBegin:(NSString *)event) {
-    [[SensorsAnalyticsSDK sharedInstance] trackTimerBegin:event];
+    [[SensorsAnalyticsSDK sharedInstance] trackTimerStart:event];
 }
 
 RCT_EXPORT_METHOD(trackEnd:(NSString *)event properties:(NSDictionary *)properties) {
@@ -87,8 +87,5 @@ RCT_EXPORT_METHOD(trackInstallation:(NSString *)event properties:(NSDictionary *
         [[SensorsAnalyticsSDK sharedInstance] trackInstallation:event];
     }
 }
-
-
-
 
 @end
