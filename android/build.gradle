@@ -31,5 +31,5 @@ dependencies {
     compile 'com.facebook.react:react-native:+'
 
     //添加 Sensors Analytics SDK 依赖
-    compile 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:1.9.3'
+    compile 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:2.1.2'
 }
