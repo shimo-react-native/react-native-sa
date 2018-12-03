@@ -53,7 +53,6 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void init(ReadableMap properties) {
         String serverUrl = properties.getString("serverUrl");
-        String configureURL = properties.getString("configureURL");
         int debugMode = properties.getInt("debugMode");
         DebugMode mode = DebugMode.DEBUG_OFF;
         if (debugMode == 1) {
