@@ -75,6 +75,24 @@ function enableReactNativeAutoTrack() {
 }
 
 /**
+ * 注册所有事件都有的公共属性
+ *
+ * @param properties 事件公共属性
+ */
+function registerSuperProperties(properties) {
+  RNSensorsAnalytics && RNSensorsAnalytics.registerSuperProperties && RNSensorsAnalytics.registerSuperProperties(properties);
+}
+
+/**
+ * 从 superProperty 中删除某个 property
+ *
+ * @param property 待删除的 property 的名称
+ */
+function unregisterSuperProperty(property) {
+  RNSensorsAnalytics && RNSensorsAnalytics.unregisterSuperProperty && RNSensorsAnalytics.unregisterSuperProperty(property);
+}
+
+/**
  * 追踪事件
  *
  * @param event
@@ -121,6 +139,8 @@ export default {
   setOnce,
   enableAutoTrack,
   enableReactNativeAutoTrack,
+  registerSuperProperties,
+  unregisterSuperProperty,
   track,
   trackBegin,
   trackEnd,

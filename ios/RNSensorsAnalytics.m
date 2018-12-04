@@ -68,6 +68,14 @@ RCT_EXPORT_METHOD(enableAutoTrack:(NSArray *)eventTypeList) {
     }];
 }
 
+RCT_EXPORT_METHOD(registerSuperProperties:(NSDictionary *)properties) {
+    [[SensorsAnalyticsSDK sharedInstance] registerSuperProperties:properties];
+}
+
+RCT_EXPORT_METHOD(unregisterSuperProperty:(NSString *)property) {
+    [[SensorsAnalyticsSDK sharedInstance] unregisterSuperProperty:property];
+}
+
 RCT_EXPORT_METHOD(track:(NSString *)event properties:(NSDictionary *)properties) {
     [[SensorsAnalyticsSDK sharedInstance] track:event withProperties:properties];
 }

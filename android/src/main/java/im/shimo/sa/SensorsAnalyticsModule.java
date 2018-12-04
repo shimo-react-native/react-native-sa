@@ -150,6 +150,20 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void registerSuperProperties(ReadableMap properties) {
+        try {
+            SensorsDataAPI.sharedInstance(mContext).registerSuperProperties(convertMapToJson(properties));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @ReactMethod
+    public void unregisterSuperProperty(String property) {
+        SensorsDataAPI.sharedInstance(mContext).unregisterSuperProperty(property);
+    }
+
+    @ReactMethod
     public void track(String event, ReadableMap properties) {
         try {
             SensorsDataAPI.sharedInstance(mContext).track(event, convertMapToJson(properties));
