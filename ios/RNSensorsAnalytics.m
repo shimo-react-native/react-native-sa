@@ -81,7 +81,8 @@ RCT_EXPORT_METHOD(track:(NSString *)event properties:(NSDictionary *)properties)
 }
 
 RCT_EXPORT_METHOD(trackBegin:(NSString *)event) {
-    [[SensorsAnalyticsSDK sharedInstance] trackTimerStart:event];
+    [[SensorsAnalyticsSDK sharedInstance] trackTimer:event
+                                        withTimeUnit:SensorsAnalyticsTimeUnitMilliseconds];
 }
 
 RCT_EXPORT_METHOD(trackEnd:(NSString *)event properties:(NSDictionary *)properties) {
