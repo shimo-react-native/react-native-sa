@@ -11,10 +11,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/shimohq/react-native-sa.git', :tag => "v#{s.version}" }
 
   s.ios.deployment_target = '8.0'
-  
+
   s.source_files = 'ios/**/*.{h,m,mm}'
-  
+
   s.dependency 'React'
-  s.dependency 'SensorsAnalyticsSDK'
+  s.dependency 'SensorsAnalyticsSDK_Bell'
 
 end
