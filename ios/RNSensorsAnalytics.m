@@ -52,6 +52,13 @@ RCT_EXPORT_METHOD(setOnce:(NSDictionary *)profile) {
     [[SensorsAnalyticsSDK sharedInstance] setOnce:profile];
 }
 
+RCT_EXPORT_METHOD(getDistinctId
+                  : (RCTPromiseResolveBlock)resolve
+                      rejecter
+                  : (RCTPromiseRejectBlock)reject) {
+    resolve([SensorsAnalyticsSDK sharedInstance].distinctId);
+}
+
 #pragma mark - track
 
 RCT_EXPORT_METHOD(enableAutoTrack:(NSArray *)eventTypeList) {

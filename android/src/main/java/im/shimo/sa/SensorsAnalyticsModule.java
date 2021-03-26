@@ -2,6 +2,7 @@ package im.shimo.sa;
 
 import android.util.Log;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -118,6 +119,11 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    @ReactMethod
+    public void getDistinctId(final Promise promise) {
+        promise.resolve(SensorsDataAPI.sharedInstance(mContext).getAnonymousId());
     }
 
     @ReactMethod
