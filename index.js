@@ -37,6 +37,13 @@ function logout() {
 }
 
 /**
+ * 获取 distinct_id
+ */
+function getDistinctId() {
+  return RNSensorsAnalytics.getDistinctId();
+}
+
+/**
  * 设置用户属性
  *
  * @param profile 用户属性
@@ -135,6 +142,7 @@ export default {
   init,
   login,
   logout,
+  getDistinctId,
   set,
   setOnce,
   enableAutoTrack,
