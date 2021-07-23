@@ -17,7 +17,7 @@ const RNSensorsAnalytics = NativeModules.RNSensorsAnalytics;
  * networkTypes: 同步数据时的网络策略。 ['2G', '3G', '4G', 'WIFI', 'ALL']
  */
 function init(properties) {
-  RNSensorsAnalytics && RNSensorsAnalytics.init && RNSensorsAnalytics.init(properties);
+  return RNSensorsAnalytics && RNSensorsAnalytics.init && RNSensorsAnalytics.init(properties);
 }
 
 /**
