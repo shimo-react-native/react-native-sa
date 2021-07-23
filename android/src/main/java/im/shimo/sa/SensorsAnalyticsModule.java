@@ -19,6 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +56,14 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
             mode = DebugMode.DEBUG_AND_TRACK;
         }
         final SensorsDataAPI instance = SensorsDataAPI.sharedInstance(applicationContext, serverUrl, mode);
+        // 修复 debug 模式 404 报错
+        try {
+            Field field = instance.getClass().getDeclaredField("mServerUrl");
+            field.setAccessible(true);
+            field.set(instance, serverUrl);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         // networkType
         ReadableArray networkTypes = properties.getArray("networkTypes");
