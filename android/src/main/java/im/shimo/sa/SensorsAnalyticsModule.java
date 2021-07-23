@@ -1,5 +1,6 @@
 package im.shimo.sa;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.facebook.react.bridge.Promise;
@@ -27,18 +28,12 @@ import java.util.List;
 
 public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
     private ReactApplicationContext mContext;
-    private static SensorsAnalyticsModule analyticsModule;
     private JSONObject mJsObject;
     private String mJsEvent;
 
     public SensorsAnalyticsModule(ReactApplicationContext reactContext) {
         super(reactContext);
         mContext = reactContext;
-        analyticsModule = this;
-    }
-
-    public static SensorsAnalyticsModule getAnalyticsModule() {
-        return analyticsModule;
     }
 
     @Override
@@ -46,13 +41,11 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
         return "RNSensorsAnalytics";
     }
 
-    @Override
-    public void initialize() {
-        super.initialize();
-    }
-
     @ReactMethod
-    public void init(ReadableMap properties) {
+    public void init(ReadableMap properties, final Promise promise) {
+        Context applicationContext = getReactApplicationContext().getApplicationContext();
+
+        // serverUrl & debugMode
         String serverUrl = properties.getString("serverUrl");
         int debugMode = properties.getInt("debugMode");
         DebugMode mode = DebugMode.DEBUG_OFF;
@@ -61,7 +54,7 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
         } else if (debugMode == 2) {
             mode = DebugMode.DEBUG_AND_TRACK;
         }
-        SensorsDataAPI instance = SensorsDataAPI.sharedInstance(mContext, serverUrl, mode);
+        final SensorsDataAPI instance = SensorsDataAPI.sharedInstance(applicationContext, serverUrl, mode);
 
         // networkType
         ReadableArray networkTypes = properties.getArray("networkTypes");
@@ -90,8 +83,27 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
             }
             instance.setFlushNetworkPolicy(aNetworkTypes);
         }
-    }
 
+        // superProperties
+        ReadableMap superProperties = properties.getMap("superProperties");
+        if (superProperties != null) {
+            instance.registerSuperProperties(new JSONObject(superProperties.toHashMap()));
+        }
+
+        // autoTrackList
+        ReadableArray autoTrackList = properties.getArray("autoTrackList");
+        if (autoTrackList != null) {
+            List<SensorsDataAPI.AutoTrackEventType> list = new ArrayList<>();
+            for (Object autoTrack : autoTrackList.toArrayList()) {
+                if (autoTrack instanceof String) {
+                    list.add(SensorsDataAPI.AutoTrackEventType.autoTrackEventTypeFromEventName((String) autoTrack));
+                }
+            }
+            instance.enableAutoTrack(list);
+        }
+
+        promise.resolve(null);
+    }
 
     @ReactMethod
     public void login(String loginId) {
