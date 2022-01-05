@@ -1,37 +1,46 @@
 #import "RNSensorsAnalytics.h"
-
 #import "SensorsAnalyticsSDK.h"
+
+#import <React/RCTUtils.h>
 
 @implementation RNSensorsAnalytics
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(init:(NSDictionary *)properties) {
-    NSString *serverUrl = [properties objectForKey:@"serverUrl"];
-    NSDictionary *andLaunchOptions = [properties objectForKey:@"andLaunchOptions"];
-    NSNumber *debugMode = [properties objectForKey:@"debugMode"];
-    SensorsAnalyticsSDK *instance = [SensorsAnalyticsSDK sharedInstanceWithServerURL:serverUrl andLaunchOptions:andLaunchOptions andDebugMode:(SensorsAnalyticsDebugMode)[debugMode integerValue]];
+RCT_EXPORT_METHOD(init:(NSDictionary *)properties
+                  : (RCTPromiseResolveBlock)resolve
+                      rejecter
+                  : (RCTPromiseRejectBlock)reject) {
     
-    // networkType
-    NSArray *networkTypes = [properties objectForKey:@"networkTypes"];
-    if ([networkTypes isKindOfClass:[NSArray class]]) {
-        __block SensorsAnalyticsNetworkType aNetworkTypes = SensorsAnalyticsNetworkTypeNONE;
-        [networkTypes enumerateObjectsUsingBlock:^(NSString *networkType, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([networkType isEqualToString:@"2G"]) {
-                aNetworkTypes |= SensorsAnalyticsNetworkType2G;
-            } else if ([networkType isEqualToString:@"3G"]) {
-                aNetworkTypes |= SensorsAnalyticsNetworkType3G;
-            } else if ([networkType isEqualToString:@"4G"]) {
-                aNetworkTypes |= SensorsAnalyticsNetworkType4G;
-            } else if ([networkType isEqualToString:@"WIFI"]) {
-                aNetworkTypes |= SensorsAnalyticsNetworkTypeWIFI;
-            } else if ([networkType isEqualToString:@"ALL"]) {
-                aNetworkTypes = SensorsAnalyticsNetworkTypeALL;
-                *stop = YES;
-            }
-        }];
-        [instance setFlushNetworkPolicy:aNetworkTypes];
-    }
+    RCTExecuteOnMainQueue(^{
+        NSString *serverUrl = [properties objectForKey:@"serverUrl"];
+        NSDictionary *andLaunchOptions = [properties objectForKey:@"andLaunchOptions"];
+        NSNumber *debugMode = [properties objectForKey:@"debugMode"];
+        
+        SensorsAnalyticsSDK *instance = [SensorsAnalyticsSDK sharedInstanceWithServerURL:serverUrl andLaunchOptions:andLaunchOptions andDebugMode:(SensorsAnalyticsDebugMode)[debugMode integerValue]];
+        
+        // networkType
+        NSArray *networkTypes = [properties objectForKey:@"networkTypes"];
+        if ([networkTypes isKindOfClass:[NSArray class]]) {
+            __block SensorsAnalyticsNetworkType aNetworkTypes = SensorsAnalyticsNetworkTypeNONE;
+            [networkTypes enumerateObjectsUsingBlock:^(NSString *networkType, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([networkType isEqualToString:@"2G"]) {
+                    aNetworkTypes |= SensorsAnalyticsNetworkType2G;
+                } else if ([networkType isEqualToString:@"3G"]) {
+                    aNetworkTypes |= SensorsAnalyticsNetworkType3G;
+                } else if ([networkType isEqualToString:@"4G"]) {
+                    aNetworkTypes |= SensorsAnalyticsNetworkType4G;
+                } else if ([networkType isEqualToString:@"WIFI"]) {
+                    aNetworkTypes |= SensorsAnalyticsNetworkTypeWIFI;
+                } else if ([networkType isEqualToString:@"ALL"]) {
+                    aNetworkTypes = SensorsAnalyticsNetworkTypeALL;
+                    *stop = YES;
+                }
+            }];
+            [instance setFlushNetworkPolicy:aNetworkTypes];
+        }
+        resolve(nil);
+    });
 }
                   
 #pragma mark - user
