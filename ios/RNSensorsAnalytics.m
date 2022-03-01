@@ -39,6 +39,13 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)properties
             }];
             [instance setFlushNetworkPolicy:aNetworkTypes];
         }
+        
+        // superProperties
+        NSDictionary *superProperties = [properties objectForKey:@"superProperties"];
+        if ([superProperties isKindOfClass:[NSDictionary class]]) {
+            [instance registerSuperProperties:superProperties];
+        }
+        
         resolve(nil);
     });
 }
