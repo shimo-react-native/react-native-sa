@@ -44,6 +44,15 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void init(ReadableMap properties, final Promise promise) {
+        try {
+            initSensorsAnalytics(properties);
+            promise.resolve(null);
+        } catch (Throwable throwable) {
+            promise.reject(throwable);
+        }
+    }
+
+    public void initSensorsAnalytics(ReadableMap properties) {
         Context applicationContext = getReactApplicationContext().getApplicationContext();
 
         // serverUrl & debugMode
@@ -110,8 +119,6 @@ public class SensorsAnalyticsModule extends ReactContextBaseJavaModule {
             }
             instance.enableAutoTrack(list);
         }
-
-        promise.resolve(null);
     }
 
     @ReactMethod
